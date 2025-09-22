@@ -1,7 +1,7 @@
 services:
   - type: web
-    name: fitness-api
+    name: fitness_api
     env: python
-    buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn app:app --workers 2 --threads 4 --timeout 120
-    autoDeploy: true
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn app:app"
